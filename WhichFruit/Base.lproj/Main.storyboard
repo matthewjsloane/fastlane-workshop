@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64G-M7-HMR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Which Fruit View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="whichFruitViewController" id="BYZ-38-t0r" customClass="WhichFruitViewController" customModule="WhichFruit" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which Fruit?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="khN-Qa-gE4">
+                                <rect key="frame" x="180" y="-24" width="240" height="144"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="90"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udP-fF-1Zh">
+                                <rect key="frame" x="58" y="225" width="180" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="udP-fF-1Zh" secondAttribute="height" multiplier="6:5" id="j9P-PG-VnH"/>
+                                </constraints>
+                                <state key="normal" image="strawberries"/>
+                                <connections>
+                                    <action selector="fruitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAW-5S-xkG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-Np-KAo">
+                                <rect key="frame" x="342" y="240" width="180" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eqb-Np-KAo" secondAttribute="height" multiplier="3:2" id="KFt-f4-sgn"/>
+                                </constraints>
+                                <state key="normal" image="kiwis">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fruitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9o9-fR-nFj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="OZc-cg-Qqt">
+                                <rect key="frame" x="210" y="510" width="180" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="150"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VIY-01-lRP">
+                                <rect key="frame" x="58" y="414.5" width="180" height="173.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="150"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="khN-Qa-gE4" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" multiplier="0.2" id="7tj-09-GJy"/>
+                            <constraint firstItem="OZc-cg-Qqt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E5f-yr-LBV"/>
+                            <constraint firstItem="VIY-01-lRP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" multiplier="0.1" id="EM2-Yh-Yr7"/>
+                            <constraint firstItem="udP-fF-1Zh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LYC-ZF-9o8"/>
+                            <constraint firstItem="udP-fF-1Zh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" multiplier="0.1" id="N2x-u7-iGq"/>
+                            <constraint firstItem="udP-fF-1Zh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="WKJ-94-icG"/>
+                            <constraint firstItem="VIY-01-lRP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="Z0g-kp-QjI"/>
+                            <constraint firstItem="khN-Qa-gE4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="b0n-z0-xPl"/>
+                            <constraint firstItem="eqb-Np-KAo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="eMt-2q-rhw"/>
+                            <constraint firstItem="khN-Qa-gE4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mCx-Bv-ptg"/>
+                            <constraint firstItem="eqb-Np-KAo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" multiplier="0.9" id="moe-ub-t3k"/>
+                            <constraint firstItem="eqb-Np-KAo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pAa-2U-u8m"/>
+                            <constraint firstItem="OZc-cg-Qqt" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" multiplier="0.85" id="v89-J4-WXx"/>
+                            <constraint firstItem="OZc-cg-Qqt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="wif-IV-rOu"/>
+                            <constraint firstItem="VIY-01-lRP" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" multiplier="0.98" id="x8y-0v-Uwc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cjw-Gu-jVb"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="OZc-cg-Qqt" id="1Rv-fL-Ozd"/>
+                        <outlet property="scoreLabel" destination="VIY-01-lRP" id="ZXe-sp-uDo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="304"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="otS-w1-U3N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="64G-M7-HMR" customClass="NavigationController" customModule="WhichFruit" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uMa-yc-E8C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="whichFruit" animates="NO" id="vTt-Kg-fzB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JxP-Rj-0Zs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kiwis" width="600" height="382"/>
+        <image name="strawberries" width="2290" height="1527"/>
+    </resources>
+</document>

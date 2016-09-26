@@ -1,0 +1,29 @@
+fastlane_version "1.101.0"
+
+def git_sha
+  `git rev-parse HEAD`
+end
+
+lane :unit_test do
+  scan(scheme: "NektonTests")
+  xcov(scheme: "NektonTests")
+end
+
+lane :ui_test do
+  scan(scheme: "NektonUITests")
+  xcov(scheme: "NektonUITests")
+end
+
+lane :beta do
+  changelog = changelog_from_git_commits(pretty: '- (%ae) %s', merge_commit_filtering: 'exclude_merges')
+  cert
+  sigh(force: true)
+  ENV["PROFILE_UUID"] = lane_context[SharedValues::SIGH_UDID]
+  increment_build_number(build_number: number_of_commits)
+  gym(scheme: "Nekton")
+  pilot(skip_submission: true, changelog: changelog)
+end
+
+error do |lane, exception|
+  slack(message: exception.message, success: false)
+end

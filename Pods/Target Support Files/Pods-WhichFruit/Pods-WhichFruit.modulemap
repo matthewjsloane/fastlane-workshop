@@ -1,0 +1,6 @@
+framework module Pods_WhichFruit {
+  umbrella header "Pods-WhichFruit-umbrella.h"
+
+  export *
+  module * { export * }
+}
